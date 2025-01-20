@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "e2da05a8-6e54-4c0d-a656-3094a88025d1",
+		"name": "Trueigtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33028784"
+	},
+	"item": [
+		{
+			"name": "getAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:6969/api/v1/book/getbooks"
+			},
+			"response": []
+		},
+		{
+			"name": "create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"The Great Sahu Story\",\r\n  \"genre\": \"Fiction\",\r\n  \"availability\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:6969/api/v1/book/create"
+			},
+			"response": []
+		},
+		{
+			"name": "create author",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Pratham Sahu\",\r\n    \"contact_info\":\"826907294\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:6969/api/v1/member/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL Members",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "**get specific author books by ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "**get specific author books by name",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "**count Books by Genre",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create Borrow History",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:6969/api/v1/borrowHistory/createHistory"
+			},
+			"response": []
+		},
+		{
+			"name": "get OverDueBooks By member_id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "**seach Book  Feature",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:6969/api/v1/book/search/?title=Rabindranath Tagore&genre=Fiction&author=Rabindranath%20Tagore",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "6969",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Rabindranath Tagore"
+						},
+						{
+							"key": "genre",
+							"value": "Fiction"
+						},
+						{
+							"key": "author",
+							"value": "Rabindranath%20Tagore"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
