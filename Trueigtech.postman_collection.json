@@ -22,7 +22,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"The Great Sahu Story\",\r\n  \"genre\": \"Fiction\",\r\n  \"availability\": true\r\n}\r\n",
+					"raw": "{\r\n      \"title\": \"Coorporate: the Nightmare\",\r\n      \"author_id\": 1,\r\n      \"genre\": \"Romance\",\r\n      \"availability\": \"69\"\r\n    }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,8 +36,18 @@
 		{
 			"name": "create author",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"J.K. Rowling\",\r\n  \"bio\": \"British author best known for the Harry Potter series.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:6969/api/v1/author/create"
 			},
 			"response": []
 		},
@@ -63,7 +73,8 @@
 			"name": "Get ALL Members",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://127.0.0.1:6969/api/v1/member/getMembers"
 			},
 			"response": []
 		},
@@ -71,7 +82,8 @@
 			"name": "**get specific author books by ID",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://127.0.0.1:6969/api/v1/book/findBookByAuthId/3"
 			},
 			"response": []
 		},
@@ -79,7 +91,8 @@
 			"name": "**get specific author books by name",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://127.0.0.1:6969/api/v1/book/findBookByAuthName/\"J.K. Rowling\""
 			},
 			"response": []
 		},
@@ -87,7 +100,8 @@
 			"name": "**count Books by Genre",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://127.0.0.1:6969/api/v1/book/totalBookByGenre/Fiction"
 			},
 			"response": []
 		},
@@ -98,7 +112,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"book_id\":\"1\",\r\n    \"member_id\":\"6\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -113,7 +127,8 @@
 			"name": "get OverDueBooks By member_id",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://127.0.0.1:6969/api/v1/borrowHistory/getOverDueBooks/3"
 			},
 			"response": []
 		},
@@ -123,7 +138,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:6969/api/v1/book/search/?title=Rabindranath Tagore&genre=Fiction&author=Rabindranath%20Tagore",
+					"raw": "http://127.0.0.1:6969/api/v1/book/search/?title=A Game of Thrones&genre=Fiction&author=Rabindranath Tagore",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -142,7 +157,7 @@
 					"query": [
 						{
 							"key": "title",
-							"value": "Rabindranath Tagore"
+							"value": "A Game of Thrones"
 						},
 						{
 							"key": "genre",
@@ -150,7 +165,7 @@
 						},
 						{
 							"key": "author",
-							"value": "Rabindranath%20Tagore"
+							"value": "Rabindranath Tagore"
 						}
 					]
 				}
