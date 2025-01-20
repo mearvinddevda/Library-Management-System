@@ -25,7 +25,7 @@ export const getAllBooks = async (req, res) => {
 
 export const findBookByAuthId = async(req,res)=>{
 	const authId = req.params.author_id ;
-	const query = `SELECT books.title FROM Books INNER JOIN authors ON books.author_id = ${authId}`;
+	const query = `SELECT books.title FROM books INNER JOIN authors ON books.author_id = authors.author_id where authors.author_id=${authId}`;
 	DB.query(query,(error , result)=>{
 		if(error){
 			return res.status(500).send(error);
@@ -53,7 +53,7 @@ WHERE authors.name = ${author_name};`;
 
 export const countBooksByGenre = async(req,res)=>{
 	const genre_type = req.params.genre_type ;
-	const query = `SELECT count(title) as "No of Books" from books where books.genre =  ${genre_type };`;
+	const query = `SELECT count(title) as "No of Books" from books where books.genre ="${genre_type }"`;
 	DB.query(query,(error , result)=>{
 		if(error){
 			return res.status(500).send(error);
