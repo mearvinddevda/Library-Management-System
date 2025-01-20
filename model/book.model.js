@@ -1,8 +1,6 @@
 import {DataTypes } from "sequelize";
 import { sequelize } from "../utils/db.js";
-import Author from "./author.model.js";
-// import Author from "./model/author.model.js";
-import BorrowHistory from "./borrow_history.js";
+
 
 
 const Book = sequelize.define('Book', {
@@ -27,10 +25,5 @@ const Book = sequelize.define('Book', {
     tableName: 'books',
     timestamps: false // No timestamps are required for this table
   });
-  // sequelize.sync({ force: true }).then(() => {
-  //   console.log('Database & tables created!');
-  // });
 
-  // Book.belongsTo(Author, { foreignKey: 'author_id' });
-  // Book.hasMany(BorrowHistory, { foreignKey: 'book_id' });
 export default Book;

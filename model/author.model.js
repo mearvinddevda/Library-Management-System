@@ -1,7 +1,6 @@
 import {DataTypes } from "sequelize";
 import { sequelize } from "../utils/db.js";
 import Book from "./book.model.js";
-// import Book from "./model/book.model.js";
 
 const Author = sequelize.define('Author', {
     author_id: {
@@ -21,9 +20,5 @@ const Author = sequelize.define('Author', {
     tableName: 'authors',
     timestamps: false // No timestamps are required for this table
   });
-  
-
-  // Book.belongsTo(Author, { foreignKey: 'author_id' });
-  // Author.hasMany(Book, { foreignKey: 'author_id' });
   
 export default Author;

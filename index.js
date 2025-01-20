@@ -29,12 +29,6 @@ app.use("/api/v1/author",authorRoute);
 app.use("/api/v1/member",memberRoute);
 app.use("/api/v1/borrowHistory",BorrowHistoryRouter);
 
-// Middleware
-// app.use(express.urlencoded({ extended: true }));
-
-// // Routes
-// app.use("/book", bookRoute);
-// app.use("/user", userRoute);
 
 // Start the server
 const PORT = process.env.PORT;

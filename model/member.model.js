@@ -22,9 +22,5 @@ const Member = sequelize.define('Member', {
     timestamps: false
   });
 
-  // sequelize.sync({ force: true }).then(() => {
-  //   console.log('Database & tables created!');
-  // });
-  // Member.hasMany(BorrowHistory, { foreignKey: 'member_id' });
 
   export default Member;
