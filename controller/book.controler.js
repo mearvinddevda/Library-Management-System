@@ -96,8 +96,5 @@ export const search = async(req,res)=>{  //y title, author, or genre
 		  return res.status(404).json({ success: false, message: 'No books found matching your criteria.' });
 		}
 	  });
-
-	console.log(title + ' ' + author + ' '+genre)
-	res
 }
 
